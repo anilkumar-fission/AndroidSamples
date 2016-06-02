@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">InternalStorage</string>
+    <dimen name="write">10dp</dimen>
+</resources>

@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">SQLiteDatabase</string>
+    <string name="name">Enter the Name</string>
+    <string name="phonenumber">Enter the Phone number</string>
+    <string name="branch">Enter the Branch</string>
+    <string name="insert">Insert</string>
+    <string name="delete">Delete</string>
+    <string name="showone">Show One</string>
+    <string name="show_all">Show All</string>
+    <string name="deleteFile">Do You Want to Delete</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+</resources>

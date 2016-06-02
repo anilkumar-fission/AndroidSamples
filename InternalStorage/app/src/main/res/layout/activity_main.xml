@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.fission.internalstorage.MainActivity">
+    <EditText
+        android:id="@+id/EnterValue"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter the Data"
+        android:minLines="5"/>
+    <Button
+        android:id="@+id/Internalwrite"
+        android:layout_below="@+id/EnterValue"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Internal Storage Write data"/>
+    <Button
+        android:id="@+id/Internalread"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Internalwrite"
+        android:text="Internal storage Read Data"/>
+    <Button
+        android:id="@+id/ExternalWrite"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Internalread"
+        android:text="External Storage Write data"/>
+    <Button
+        android:id="@+id/ExternalRead"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ExternalWrite"
+        android:text="External Storage Read data"/>
+</RelativeLayout>

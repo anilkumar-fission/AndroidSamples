@@ -1,0 +1,21 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    tools:context="com.fission.fragment.FragmentExample">
+
+
+    <fragment
+        android:layout_height="match_parent"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        class="com.fission.fragment.LoginFragment"
+        android:id="@+id/Login"/>
+    <fragment
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="match_parent"
+        class="com.fission.fragment.SignUpFragment"
+        android:id="@+id/SignUp"/>
+</LinearLayout>

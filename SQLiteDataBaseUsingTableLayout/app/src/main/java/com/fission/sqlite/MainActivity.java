@@ -98,8 +98,8 @@ public class MainActivity extends Activity implements View.OnClickListener {
                     buffer.append("Branch:"+c.getString(1)+"");
                     buffer.append("PhoneNum:"+c.getString(2)+"\n");
                 }
-                Toast.makeText(getApplicationContext(),"Student detail"+buffer.toString(),Toast.LENGTH_LONG).show();
-                break;
+               /* Toast.makeText(getApplicationContext(),"Student detail"+buffer.toString(),Toast.LENGTH_LONG).show();
+                break;*/
         }
 
     }

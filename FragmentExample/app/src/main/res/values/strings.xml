@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">FragmentExample</string>
+    <string name="landscape">This is land scape mode fragment</string>
+    <string name="portraitmode">This is the portrait mode fragment</string>
+</resources>

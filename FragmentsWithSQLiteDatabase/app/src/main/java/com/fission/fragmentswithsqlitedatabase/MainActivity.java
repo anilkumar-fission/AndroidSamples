@@ -1,25 +1,35 @@
 package com.fission.fragmentswithsqlitedatabase;
 
-import android.app.Activity;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.content.Context;
-import android.database.sqlite.SQLiteDatabase;
-import android.support.v7.app.ActionBarActivity;
-import android.support.v7.app.AppCompatActivity;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 
 public class MainActivity extends AppCompatActivity {
-    int staus=0;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        FragmentManager fragmentManager=getFragmentManager();
-        FragmentTransaction fragmentTransaction=fragmentManager.beginTransaction();
-        LoginFragment firstFragment=new LoginFragment();
-        fragmentTransaction.add(R.id.your_placeholder,firstFragment);
-        fragmentTransaction.commit();
+
+        SharedPreferences sharedPreferences = getSharedPreferences("my_prefs", Context.MODE_PRIVATE);
+        boolean isUserLogin = sharedPreferences.getBoolean("is_user_login", false);
+        Log.e("A", "login value:" + isUserLogin);
+
+        if (isUserLogin) {
+            HomeFragment homeFragment = new HomeFragment();
+            FragmentTransaction transaction = getFragmentManager().beginTransaction();
+            transaction.replace(R.id.your_placeholder, homeFragment);
+            transaction.commit();
+        } else {
+            FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
+            LoginFragment firstFragment = new LoginFragment();
+            fragmentTransaction.add(R.id.your_placeholder, firstFragment);
+            fragmentTransaction.commit();
+        }
 
     }
 
